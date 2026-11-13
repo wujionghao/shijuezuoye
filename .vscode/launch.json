@@ -5,10 +5,10 @@
             "name": "OpenCV test (MSVC x64)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\build\\test_opencv.exe",
+            "program": "${workspaceFolder}\\test\\build\\test_opencv.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}\\test",
             "environment": [],
             "console": "integratedTerminal",
             "preLaunchTask": "build (opencv test)"

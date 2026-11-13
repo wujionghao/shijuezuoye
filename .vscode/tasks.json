@@ -10,7 +10,7 @@
                 "build.bat"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}\\test"
             },
             "group": {
                 "kind": "build",
@@ -28,9 +28,9 @@
         {
             "label": "run (opencv test)",
             "type": "shell",
-            "command": "${workspaceFolder}\\build\\test_opencv.exe",
+            "command": "${workspaceFolder}\\test\\build\\test_opencv.exe",
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${workspaceFolder}\\test"
             },
             "dependsOn": [
                 "build (opencv test)"
