@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build (opencv test)",
+            "type": "shell",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "build.bat"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            }
+        },
+        {
+            "label": "run (opencv test)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\build\\test_opencv.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "dependsOn": [
+                "build (opencv test)"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

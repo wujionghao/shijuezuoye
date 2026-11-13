@@ -1,0 +1,7 @@
+{
+    "files.encoding": "utf8",
+    "files.associations": {
+        "*.hpp": "cpp"
+    },
+    "C_Cpp.default.cppStandard": "c++17"
+}
