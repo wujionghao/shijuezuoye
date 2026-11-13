@@ -2,16 +2,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "OpenCV test (MSVC x64)",
+            "name": "Current project (MSVC x64)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}\\test\\build\\test_opencv.exe",
+            "program": "${fileDirname}\\build\\app.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}\\test",
+            "cwd": "${fileDirname}",
             "environment": [],
             "console": "integratedTerminal",
-            "preLaunchTask": "build (opencv test)"
+            "preLaunchTask": "build (current project)"
         }
     ]
 }

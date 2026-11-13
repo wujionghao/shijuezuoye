@@ -21,7 +21,7 @@
 main.cpp                  课件代码（唯一改动：加了读图失败的提示，文件缺失时不会异常退出）
 coins.png                 测试用图（脚本生成的 5 枚“硬币”，替代课件里的 D:\coins.png）
 build.bat                 一键编译脚本
-build/test_opencv.exe     编译产物
+build/app.exe             编译产物
 build/screenshot.png      实际运行时的窗口截图（验证 imshow 正常）
 .vscode/tasks.json        Ctrl+Shift+B 编译任务
 .vscode/launch.json       F5 调试（cppvsdbg），会先自动编译
@@ -33,15 +33,15 @@ build/screenshot.png      实际运行时的窗口截图（验证 imshow 正常�
 **方式一：VSCode**
 1. 用 VSCode 打开本文件夹 `E:\~大三\视觉作业`
 2. 装扩展：C/C++（ms-vscode.cpptools）
-3. `Ctrl+Shift+B` 编译；`F5` 编译并运行；或 `Ctrl+F5` 直接运行
+3. 打开 `test/main.cpp`，选择 `Current project (MSVC x64)`；按 `F5` 编译并运行，或按 `Ctrl+F5` 不调试运行
 4. 弹出 `test` 窗口后按任意键关闭
 
 **方式二：命令行**
 ```bat
 build.bat
-build\test_opencv.exe
+build\app.exe
 ```
-（必须在 `E:\~大三\视觉作业` 目录下运行，因为 `imread("coins.png")` 是相对当前工作目录。）
+（必须在 `E:\~大三\视觉作业\test` 目录下运行，因为 `imread("coins.png")` 是相对当前工作目录。）
 
 ## 预期结果
 

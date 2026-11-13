@@ -6,9 +6,10 @@
 
 ```bat
 build.bat
-build\class1.exe
+build\app.exe
 ```
 
-默认读取 `paperclips.jpg`，也可以指定其他图片，例如 `build\class1.exe other.jpg`。结果保存为当前目录下的 `binary.png` 和 `result.png`，重复运行会覆盖；控制台输出计数。
+默认读取 `paperclips.jpg`，也可以指定其他图片，例如 `build\app.exe other.jpg`。结果保存为当前目录下的 `binary.png` 和 `result.png`，重复运行会覆盖；控制台输出计数。
+运行后会显示原图、二值化图和计数结果三个窗口，在任意图片窗口按任意键即可关闭并退出。
 
 构建依赖本机 `D:\Visual Studio\2` 的 MSVC 和 `D:\opencv` 的 OpenCV 4.12.0。面积阈值 300 像素、5×5 闭运算和边框处理针对示例图设置；其他分辨率、光照或相互接触的物体可能需要调整参数，粘连物体不能保证分别计数。

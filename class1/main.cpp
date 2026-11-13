@@ -13,6 +13,7 @@ int main(int argc, char* argv[])
         return 1;
     }
 
+    cv::Mat original = image.clone();
     cv::Mat gray, binary, labels, stats, centroids;
     cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
     cv::GaussianBlur(gray, gray, cv::Size(5, 5), 0);
@@ -50,5 +51,10 @@ int main(int argc, char* argv[])
         return 1;
     }
     std::cout << "Count: " << count << "\nSaved: binary.png, result.png" << std::endl;
+    cv::imshow("Original", original);
+    cv::imshow("Binary", binary);
+    cv::imshow("Counting result", image);
+    cv::waitKey(0);
+    cv::destroyAllWindows();
     return 0;
 }

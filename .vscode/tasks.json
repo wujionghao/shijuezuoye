@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build (opencv test)",
+            "label": "build (current project)",
             "type": "shell",
             "command": "cmd",
             "args": [
@@ -10,7 +10,7 @@
                 "build.bat"
             ],
             "options": {
-                "cwd": "${workspaceFolder}\\test"
+                "cwd": "${fileDirname}"
             },
             "group": {
                 "kind": "build",
@@ -24,18 +24,6 @@
                 "panel": "shared",
                 "clear": true
             }
-        },
-        {
-            "label": "run (opencv test)",
-            "type": "shell",
-            "command": "${workspaceFolder}\\test\\build\\test_opencv.exe",
-            "options": {
-                "cwd": "${workspaceFolder}\\test"
-            },
-            "dependsOn": [
-                "build (opencv test)"
-            ],
-            "problemMatcher": []
         }
     ]
 }

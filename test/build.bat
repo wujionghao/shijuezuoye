@@ -22,12 +22,12 @@ cl /nologo /utf-8 /EHsc /std:c++17 /MD /O2 /W3 ^
    "%~dp0main.cpp" ^
    /I"%OPENCV_DIR%\include" ^
    /link /LIBPATH:"%OPENCV_DIR%\x64\vc16\lib" opencv_world4120.lib ^
-   /OUT:"%~dp0build\test_opencv.exe"
+   /OUT:"%~dp0build\app.exe"
 if errorlevel 1 (
     echo [ERROR] build failed
     exit /b 1
 )
 
 copy /y "%OPENCV_DIR%\x64\vc16\bin\opencv_world4120.dll" "%~dp0build\" >nul
-echo [OK] build\test_opencv.exe
+echo [OK] build\app.exe
 exit /b 0
